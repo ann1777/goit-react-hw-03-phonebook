@@ -27,20 +27,6 @@ export default class App extends Component {
     filter: '',
   };
 
-  static propTypes = {
-    addNewContact: PropTypes.func.isRequired,
-  };
-
-  onSubmitForm = e => {
-    e.preventDefault();
-    this.props.addNewContact(this.state);
-    this.resetForm();
-  };
-
-  resetForm = () => {
-    this.setState({ name: '', number: '' });
-  };
-
    onAddContact = (newContact) => {
     const { contacts } = this.state;
     contacts.some(
