@@ -5,7 +5,6 @@ import ContactsForm from './ContactsForm/ContactsForm';
 import { ContactsFilter } from './ContactsFilter/ContactsFilter';
 import { ContactList } from './ContactList/ContactList';
 import { GlobalStyle } from './GlobalStyle';
-import PropTypes from 'prop-types';
 import data from './contacts.json';
 import { ThemeProvider } from './ThemeProvider/ThemeProvider';
 import { theme } from './theme';
