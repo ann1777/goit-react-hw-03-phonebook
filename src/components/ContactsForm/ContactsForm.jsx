@@ -20,20 +20,6 @@ const INITIAL_STATE = {
 class ContactsForm extends Component {
   state = INITIAL_STATE;
 
-  componentDidMount() {
-    if (localStorage.getItem('contacts')) {
-      this.setState(() => {
-        return { contacts: [...JSON.parse(localStorage.getItem('contacts'))] };
-      });
-    }
-  }
-
-  componentDidUpdate(_, prevState) {
-    if (prevState.contact !== this.state.contacts) {
-      localStorage.setItem('contacts', JSON.stringify(this.state.contacts));
-    }
-  }
-
   onFormSubmit = event => {
     event.preventDefault();
     const { name, number } = this.state;
